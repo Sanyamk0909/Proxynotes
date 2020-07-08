@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 const uploadRouter = require('./routes/uploadRouter');
-
+var emails = require('./routes/emails');
 const url = config.mongoUrl;
 const connect = mongoose.connect(url);
 connect.then((db) => {
@@ -43,6 +43,7 @@ app.use(passport.initialize());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/media/upload',uploadRouter);
+app.use('/forgotpassword',emails);
 
 
 
