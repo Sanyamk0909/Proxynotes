@@ -49,8 +49,8 @@ router.post('/', function (req, res, next) {
         function (callback) {
           sendEmail(
             callback,
-            'sanyamgk@iitk.ac.in',
-            ['ayushim@iitk.ac.in'],
+            'sender@iitk.ac.in',
+            ['receiver@iitk.ac.in'],
             'Subject Line',
             'Text Content',
             '<p style="font-size: 32px;">8989</p>'
