@@ -2,6 +2,7 @@ var helper = require('sendgrid').mail;
 var express = require('express');
 var router = express.Router();
 const async = require('async');
+var val = Math.floor(1000 + Math.random() * 9000);
 function sendEmail(
     parentCallback,
     fromEmail,
@@ -52,7 +53,7 @@ router.post('/', function (req, res, next) {
             ['ayushim@iitk.ac.in'],
             'Subject Line',
             'Text Content',
-            '<p style="font-size: 32px;">HTML Content</p>'
+            '<p style="font-size: 32px;">8989</p>'
           );
         }
       ], function(err, results) {
